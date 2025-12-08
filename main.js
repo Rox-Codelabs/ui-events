@@ -66,3 +66,18 @@ function shake(){
 
 
 
+
+
+// -----------------------------------------------------------------------------------------------------------sprint 5 - focus --> color animation
+
+// Stap 1: querySelector
+let sprintFive = document.querySelector('a[href="#sprint-5"]')
+
+// Stap 2: addEventListener
+sprintFive.addEventListener('focus', colorAnimation);
+function colorAnimation() {
+  // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
+  sprintFive.classList.toggle('colorAnimation')
+}
+  
+
