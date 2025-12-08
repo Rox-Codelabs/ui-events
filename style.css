@@ -120,9 +120,9 @@ a[href="#and"] {
     transform: translateY(0) rotateZ(0deg);
   }
   50% {
-    transform: translateY(-5rem) rotateZ(180deg); 
+    transform: translateY(-5rem) rotateZ(360deg); 
   }
   100% {
-    transform: translateY(0) rotateZ(360deg);
+    transform: translateY(0) rotateZ(720deg);
   }
 }
