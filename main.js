@@ -22,14 +22,19 @@ function jumpHandler() {
 interaction.addEventListener('animationend', jumpHandler)
 
 
-// Ga zelf verder met de overige elementen, aan de hand van de instructies
-// Maak bijvoorbeeld een bibber animatie als je op iets klikt
+
+// ---------------------------------------------------------------------------------------------------------------Frontend interactie click -> scale
 
 // Stap 1: querySelector
-// let bibberLink = document.querySelector...
+let frontend = document.querySelector('a[href="#frontend"]')
 
 // Stap 2: addEventListener
-// bibberLink.addEventListener...
+frontend.addEventListener('click', scale)
+function scale(){
+  // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
+  frontend.classList.toggle('scale')
+}
+frontend.addEventListener('animationend', scale)
 
-// Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
-// bibberLink.classList.toggle...
+
+
