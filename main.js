@@ -28,7 +28,7 @@ let frontend = document.querySelector('a[href="#frontend"]')
 // Stap 2: addEventListener
 frontend.addEventListener('click', scale)
 function scale(){
-  // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
+  // Stap 3: 
   frontend.classList.toggle('scale')
 }
 
@@ -44,7 +44,7 @@ let and = document.querySelector('a[href="#and"]')
 // Stap 2: addEventListener
 and.addEventListener('click', flippy)
 function flippy(){
-  // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
+  // Stap 3: 
   and.classList.toggle('flippy')
 }
 
@@ -60,7 +60,7 @@ let development = document.querySelector('a[href="#development"]')
 // Stap 2: addEventListener
 development.addEventListener('click', shake)
 function shake(){
-  // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
+  // Stap 3: 
   development.classList.toggle('shake')
 }
 
@@ -74,10 +74,24 @@ function shake(){
 let sprintFive = document.querySelector('a[href="#sprint-5"]')
 
 // Stap 2: addEventListener
-sprintFive.addEventListener('focus', colorAnimation);
-function colorAnimation() {
-  // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
-  sprintFive.classList.toggle('colorAnimation')
-}
-  
+sprintFive.addEventListener('focus', function(){
+  // Stap 3:
+  sprintFive.classList.add('colorAnimation');
+});
+
+sprintFive.addEventListener('blur', function(){
+  sprintFive.classList.remove('colorAnimation');
+});
+
+
+
+
+
+// -----------------------------------------------------------------------------------------------------------Fix - 
+
+// Stap 1: querySelector
+
+// Stap 2: addEventListener
+
+  // Stap 3:
 
