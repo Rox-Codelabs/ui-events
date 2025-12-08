@@ -94,14 +94,30 @@ let fix = document.querySelector('a[href="#fix"]')
 
 fix.addEventListener('mouseenter', function(){
   fix.classList.add('typing')
-  fix.textContent = "Ik klik eerst, denk later."
-  //of
+
   fix.textContent = "Als het werkt, was het niet creatief genoeg."
+  //of
+  fix.textContent = "Ik klik eerst, denk later."
 });
+
 fix.addEventListener('mouseleave', function(){
   fix.textContent = "Fix"
   fix.classList.remove('typing')
 });
 
 
+
+
+
+// -----------------------------------------------------------------------------------------------------------the  - Mouseout → rotate animatie
+
+// Stap 1: querySelector
+let the = document.querySelector('a[href="#the"]')
+// Stap 2: addEventListener
+the.addEventListener('mouseover', rotate)
+function rotate(){
+  the.classList.toggle('rotate')
+  // Stap 3:
+}
+  
 

@@ -190,6 +190,20 @@ a[href="#fix"] {
     width: 0ch;
   }
   100%{
-    width: 37ch;
+    width: 20ch;
   }
 }
+
+/*the*/
+
+.rotate{
+  animation-name: rotate;
+  animation-duration: 0.4s;
+}
+
+@keyframes rotate{
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(720deg); }
+}
+
+/*flow*/
