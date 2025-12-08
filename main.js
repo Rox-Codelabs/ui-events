@@ -31,7 +31,18 @@ function scale(){
   // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
   frontend.classList.toggle('scale')
 }
-frontend.addEventListener('animationend', scale)
+
+// ---------------------------------------------------------------------------------------------------------------& interactie click -> translate
+
+// Stap 1: querySelector
+let and = document.querySelector('a[href="#and"]')
+
+// Stap 2: addEventListener
+and.addEventListener('click', flippy)
+function flippy(){
+  // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
+  and.classList.toggle('flippy')
+}
 
 
 

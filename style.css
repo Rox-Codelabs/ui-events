@@ -82,39 +82,47 @@ a[href="#design"] {
   }
 }
 
-/* Hieronder komen jouw animaties */
-
-a[href="#frontend"]{
-  position: relative;
-}
+/* Frontend */
 
 .scale{
-  animation-name: scale; 
-  animation-timing-function: cubic-bezier(.25, .95, .5, 1.35); /*hoe de animatie versnelt en vertraagt*/
-  animation-duration: 0.9s;
-  animation-iteration-count: 1; /*De animatie wordt maar één keer afgespeeld (dus geen loop)*/
+  animation-name: scale;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
 }
 
 @keyframes scale{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+
+/* & */
+a[href="#and"] {
+  
+}
+
+.flippy{
+  animation-name: flippy;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+}
+
+@keyframes flippy {
   0% {
-    transform: scale(1, 1) translateY(0);
-  }
-  10% {
-    transform: scale(0.8, 1) translateY(2rem);
-  }
-  30% {
-    transform: scale(0.7, 1.5) translateY(4rem);
+    transform: translateY(0) rotateZ(0deg);
   }
   50% {
-    transform: scale(0.6, 1.5) translateY(6rem);
-  }
-  57% {
-    transform: scale(0.5, 1.5) translateY(8rem);
-  }
-  64% {
-    transform: scale(0.5, 1.5) translateY(10rem);
+    transform: translateY(-5rem) rotateZ(180deg); 
   }
   100% {
-    transform: scale(0.85, 1.3) translateY(12rem);
+    transform: translateY(0) rotateZ(360deg);
   }
 }
