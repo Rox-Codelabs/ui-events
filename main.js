@@ -20,7 +20,7 @@ function jumpHandler() {
 designLink.addEventListener('animationend', jumpHandler)
 
 
-// ---------------------------------------------------------------------------------------------------------------Frontend interactie click -> scale
+// ---------------------------------------------------------------------------------------------------------------Frontend - click -> scale
 
 // Stap 1: querySelector
 let frontend = document.querySelector('a[href="#frontend"]')
@@ -32,7 +32,11 @@ function scale(){
   frontend.classList.toggle('scale')
 }
 
-// ---------------------------------------------------------------------------------------------------------------& interactie click -> translate
+
+
+
+
+// ---------------------------------------------------------------------------------------------------------------& - click -> translate
 
 // Stap 1: querySelector
 let and = document.querySelector('a[href="#and"]')
@@ -42,6 +46,22 @@ and.addEventListener('click', flippy)
 function flippy(){
   // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
   and.classList.toggle('flippy')
+}
+
+
+
+
+
+// -----------------------------------------------------------------------------------------------------------development - double click --> shake
+
+// Stap 1: querySelector
+let development = document.querySelector('a[href="#development"]')
+
+// Stap 2: addEventListener
+development.addEventListener('click', shake)
+function shake(){
+  // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
+  development.classList.toggle('shake')
 }
 
 
