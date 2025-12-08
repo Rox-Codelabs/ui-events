@@ -173,6 +173,23 @@ a[href="#design"] {
 }
 
 /*Fix*/
-#fix{
-  transition: ease-out 0.3s;
+
+a[href="#fix"] {
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: -1.8rem;
+}
+
+.typing{
+  animation-name: typing;
+  animation-duration: 0.7s;
+}
+
+@keyframes typing{
+  0%{
+    width: 0ch;
+  }
+  100%{
+    width: 37ch;
+  }
 }

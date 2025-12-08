@@ -92,8 +92,15 @@ sprintFive.addEventListener('blur', function(){
 // Stap 1: querySelector
 let fix = document.querySelector('a[href="#fix"]')
 
-fix.addEventListener('mouseover', function(){
+fix.addEventListener('mouseenter', function(){
+  fix.classList.add('typing')
   fix.textContent = "Ik klik eerst, denk later."
+  //of
+  fix.textContent = "Als het werkt, was het niet creatief genoeg."
+});
+fix.addEventListener('mouseleave', function(){
+  fix.textContent = "Fix"
+  fix.classList.remove('typing')
 });
 
 
