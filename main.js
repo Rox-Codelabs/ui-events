@@ -114,10 +114,35 @@ fix.addEventListener('mouseleave', function(){
 // Stap 1: querySelector
 let the = document.querySelector('a[href="#the"]')
 // Stap 2: addEventListener
-the.addEventListener('mouseover', rotate)
+the.addEventListener('mouseout', rotate)
 function rotate(){
-  the.classList.toggle('rotate')
   // Stap 3:
+  the.classList.toggle('rotate')
 }
+
+
+
+
+
+// -----------------------------------------------------------------------------------------------------------flow
+
+// Stap 1: querySelector
+let flow = document.querySelector('a[href="#flow"]')
+// Stap 2: addEventListener
+flow.addEventListener('mousedown', function(){
+  // Stap 3:
+  flow.classList.add('flip')
+});
+
+flow.addEventListener('mouseup', function(){
+  // Stap 3:
+  flow.classList.remove('flip')
+});
+
+
+
+
+
   
+
 

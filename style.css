@@ -207,3 +207,9 @@ a[href="#fix"] {
 }
 
 /*flow*/
+
+.flip{
+  animation-name: flip;
+  animation-duration: 0.5s;
+  transform: rotateY(180deg);
+}
