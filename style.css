@@ -173,3 +173,6 @@ a[href="#design"] {
 }
 
 /*Fix*/
+#fix{
+  transition: ease-out 0.3s;
+}
