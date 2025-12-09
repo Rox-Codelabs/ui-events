@@ -87,7 +87,7 @@ sprintFive.addEventListener('blur', function(){
 
 
 
-// -----------------------------------------------------------------------------------------------------------Fix - 
+// -----------------------------------------------------------------------------------------------------------Fix - Mouseover → verander tekst
 
 // Stap 1: querySelector
 let fix = document.querySelector('a[href="#fix"]')
@@ -124,7 +124,7 @@ function rotate(){
 
 
 
-// -----------------------------------------------------------------------------------------------------------flow
+// -----------------------------------------------------------------------------------------------------------flow - Mousedown en mouseup → flip en terug
 
 // Stap 1: querySelector
 let flow = document.querySelector('a[href="#flow"]')
@@ -143,18 +143,35 @@ flow.addEventListener('mouseup', function(){
 
 
 
-// -----------------------------------------------------------------------------------------------------------flow
+// -----------------------------------------------------------------------------------------------------------user Keyup → kleur veranderen
 
 //Stap 1:
 let user = document.querySelector('a[href="#user"]')
 //Stap 2:
-document.addEventListener('keyup', event => {
-  user.style.backgroundColor = 'blue';
+document.addEventListener('keydown', event => {
+  //Stap 3:
+  if(event.key === ("p")){
+    user.style.backgroundColor = 'pink';
+  }
+  if(event.key === ("b")){
+    user.style.backgroundColor = 'blue';
+  }
+  if(event.key === ("y")){
+    user.style.backgroundColor = 'yellow';
+  }
 });
 
-document.addEventListener('keydown', event => {
-  user.style.backgroundColor = 'pink';
+//Stap 2:
+document.addEventListener('keyup', event => {
+  //Stap 3:
+  if(["p", "b", "y"].includes(event.key)){
+    user.style.backgroundColor = 'inherit';
+  }
 });
   
 
 
+
+
+
+// -----------------------------------------------------------------------------------------------------------user Keyup → kleur veranderen
