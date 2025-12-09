@@ -174,4 +174,22 @@ document.addEventListener('keyup', event => {
 
 
 
-// -----------------------------------------------------------------------------------------------------------user Keyup → kleur veranderen
+// ---------------------------------------------------Keydown → blaas de link op als een ballon, en laat leeglopen als je het toetsenbord loslaat
+//Stap 1:
+let interface = document.querySelector('a[href="#interface"]')
+
+//Stap 2: 
+document.addEventListener('keydown', event => {
+  //stap 3: 
+  if (event.key === "i"){
+    interface.classList.add('balloon')
+  }
+});
+
+document.addEventListener('keyup', event => {
+  //stap 3: 
+  if (event.key === "i"){
+    interface.classList.remove('balloon')
+    interface.classList.add('deflate')
+  }
+});
