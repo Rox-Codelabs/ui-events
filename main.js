@@ -143,6 +143,18 @@ flow.addEventListener('mouseup', function(){
 
 
 
+// -----------------------------------------------------------------------------------------------------------flow
+
+//Stap 1:
+let user = document.querySelector('a[href="#user"]')
+//Stap 2:
+document.addEventListener('keyup', event => {
+  user.style.backgroundColor = 'blue';
+});
+
+document.addEventListener('keydown', event => {
+  user.style.backgroundColor = 'pink';
+});
   
 
 
