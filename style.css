@@ -253,3 +253,14 @@ a[href="#events"] {
   display: block;
   transform-origin: center center;
 }
+
+/*interaction*/
+
+a[href="#interaction"] {
+  --x: 50%;
+  --y: 50%;
+
+  background: radial-gradient(circle at var(--x) var(--y),
+      rgb(255, 0, 0) 3%,
+      rgb(217, 255, 0) 40%);
+}

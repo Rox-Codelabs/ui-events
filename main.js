@@ -231,6 +231,23 @@ wheelEvents.onwheel = (e) => {
 
 
 
-// -------------------------------------------------------------Mousemove → radial gradient die de muis volgt 
-// Stap 1:
 
+
+// -------------------------------------------------------------Mousemove → radial gradient die de muis volgt 
+let interaction = document.querySelector('a[href="#interaction"]');
+
+interaction.addEventListener("mousemove", function (event) {
+  let x = event.offsetX;
+  let y = event.offsetY;
+
+  interaction.style.setProperty("--x", x + "px");
+  interaction.style.setProperty("--y", y + "px");
+});
+
+interaction.addEventListener("mouseleave", function () {
+  interaction.style.background = "none";
+});
+
+interaction.addEventListener("mouseenter", function () {
+  interaction.style.background = "";
+});
