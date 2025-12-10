@@ -193,3 +193,34 @@ document.addEventListener('keyup', event => {
     interface.classList.add('deflate')
   }
 });
+
+
+
+
+
+
+// ------------------------------------------------------------ wheel event -> typografie word groter en kleiner
+// Stap 1:
+let wheelEvent = document.querySelector('a[href="#event"]')
+let scale = 1;
+
+const minScale = 0.0125;
+const maxScale = 4;
+
+wheelEvent.addEventListener('wheel', zoom);
+
+function zoom(event) {
+  event.preventDefault();
+
+  scale += event.deltaY *-0.01;
+
+  if (scale < minScale) {
+    scale = minScale;
+  }
+
+  if (scale > maxScale) {
+    scale = maxScale;
+  }
+
+  wheelEvent.style.transform = `scale(${scale})`;
+};

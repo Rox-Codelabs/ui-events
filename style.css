@@ -247,3 +247,9 @@ a[href="#fix"] {
     transform: scale(1); 
   }
 }
+
+/*event*/
+a[href="#event"] {
+  display: block;
+  transform-origin: center center;
+}
