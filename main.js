@@ -224,10 +224,6 @@ function zoom(event) {
 
 wheelEvents.addEventListener('wheel', zoom);
 
-wheelEvents.onwheel = (e) => {
-  console.log('wheel event fired');
-};
-
 
 
 
