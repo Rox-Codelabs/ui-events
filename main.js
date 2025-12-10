@@ -201,18 +201,16 @@ document.addEventListener('keyup', event => {
 
 // ------------------------------------------------------------ wheel event -> typografie word groter en kleiner
 // Stap 1:
-let wheelEvent = document.querySelector('a[href="#event"]')
-let scale = 1;
+let wheelEvents = document.querySelector('a[href="#events"]')
+let scale2 = 1;
 
 const minScale = 0.0125;
 const maxScale = 4;
 
-wheelEvent.addEventListener('wheel', zoom);
-
 function zoom(event) {
   event.preventDefault();
 
-  scale += event.deltaY *-0.01;
+  scale2 += event.deltaY *-0.01;
 
   if (scale < minScale) {
     scale = minScale;
@@ -222,5 +220,11 @@ function zoom(event) {
     scale = maxScale;
   }
 
-  wheelEvent.style.transform = `scale(${scale})`;
+  wheelEvents.style.transform = `scale(${scale2})`;
+};
+
+wheelEvent.addEventListener('wheel', zoom);
+
+wheelEvent.onwheel = (e) => {
+  console.log('wheel event fired');
 };

@@ -248,8 +248,8 @@ a[href="#fix"] {
   }
 }
 
-/*event*/
-a[href="#event"] {
+/*events*/
+a[href="#events"] {
   display: block;
   transform-origin: center center;
 }
