@@ -200,11 +200,10 @@ document.addEventListener('keyup', event => {
 
 
 // ------------------------------------------------------------ wheel event -> typografie word groter en kleiner
-// Stap 1:
 let wheelEvents = document.querySelector('a[href="#events"]')
 let scale2 = 1;
 
-const minScale = 0.0125;
+const minScale = 0.5;
 const maxScale = 4;
 
 function zoom(event) {
@@ -212,19 +211,26 @@ function zoom(event) {
 
   scale2 += event.deltaY *-0.01;
 
-  if (scale < minScale) {
-    scale = minScale;
+  if (scale2 < minScale) {
+    scale2 = minScale;
   }
 
-  if (scale > maxScale) {
-    scale = maxScale;
+  if (scale2 > maxScale) {
+    scale2 = maxScale;
   }
 
   wheelEvents.style.transform = `scale(${scale2})`;
 };
 
-wheelEvent.addEventListener('wheel', zoom);
+wheelEvents.addEventListener('wheel', zoom);
 
-wheelEvent.onwheel = (e) => {
+wheelEvents.onwheel = (e) => {
   console.log('wheel event fired');
 };
+
+
+
+
+// -------------------------------------------------------------Mousemove → radial gradient die de muis volgt 
+// Stap 1:
+
